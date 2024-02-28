@@ -1,5 +1,6 @@
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event) => {
 	try {
+		const { query } = getQuery(event);
 		const config = useRuntimeConfig();
 		const options = {
 			method: 'GET',
@@ -8,7 +9,7 @@ export default defineEventHandler(async () => {
 				Authorization: config.apiKey,
 			},
 		};
-		const response = await $fetch(`${config.apiBaseUrl}/movie/upcoming?language=en-US&page=1`, options);
+		const response = await $fetch(`${config.apiBaseUrl}/search/movie?query=${query}&language=en-US&page=1`, options);
 		return response;
 	} catch (error) {
 		console.error(error);

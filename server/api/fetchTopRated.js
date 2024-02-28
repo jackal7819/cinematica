@@ -8,12 +8,8 @@ export default defineEventHandler(async () => {
 				Authorization: config.apiKey,
 			},
 		};
-		const response = await fetch(`${config.apiBaseUrl}/movie/top_rated?language=en-US&page=1`, options);
-		if (!response.ok) {
-			throw new Error('Failed to fetch data');
-		}
-		const data = await response.json();
-		return data.results;
+		const response = await $fetch(`${config.apiBaseUrl}/movie/top_rated?language=en-US&page=1`, options);
+		return response;
 	} catch (error) {
 		console.error(error);
 		return null;

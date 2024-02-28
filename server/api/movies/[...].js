@@ -1,5 +1,7 @@
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event) => {
 	try {
+		const { id } = getQuery(event);
+		// const id = [...event.node.req.url.split('/')].pop();
 		const config = useRuntimeConfig();
 		const options = {
 			method: 'GET',
@@ -8,7 +10,10 @@ export default defineEventHandler(async () => {
 				Authorization: config.apiKey,
 			},
 		};
-		const response = await $fetch(`${config.apiBaseUrl}/movie/upcoming?language=en-US&page=1`, options);
+		const response = await $fetch(
+			`${config.apiBaseUrl}/movie/${id}?language=en-US&page=1`,
+			options
+		);
 		return response;
 	} catch (error) {
 		console.error(error);

@@ -1,9 +1,9 @@
 <template>
 	<header>
 		<nav
-			class="flex items-end justify-between pb-2 border-b border-slate-400"
+			class="flex flex-wrap items-center justify-center gap-5 pb-1 border-b sm:justify-between border-slate-400"
 		>
-			<h1 class="hidden text-3xl font-bold text-green-700 sm:block">
+			<h1 class="text-3xl font-bold text-green-700">
 				Cinematica
 			</h1>
 			<ul class="flex items-center justify-between gap-10 mx-auto text-xl">
