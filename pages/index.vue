@@ -1,23 +1,5 @@
 <script setup>
-const movies = ref([]);
-	const options = {
-		method: 'GET',
-		headers: {
-			accept: 'application/json',
-			Authorization: process.env.API_KEY,
-		},
-	};
-
-	fetch(
-		'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1',
-		options
-	)
-		.then((response) => response.json())
-		.then((response) => {
-			movies.value = response.results;
-			console.log(movies.value); // Перемещаем console.log сюда
-		})
-		.catch((err) => console.error(err));
+	const { data: movies } = await useFetch('/api/fetchPopular');
 </script>
 
 <template>
