@@ -1,75 +1,27 @@
-# Nuxt 3 Minimal Starter
+## Movie App
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a movie application that allows users to browse popular, top-rated, and upcoming movies. The data for movies is fetched from The Movie Database (TMDB). The application provides three main pages: Popular Movies, Top Rated Movies, and Upcoming Movies. Additionally, users can search for movies and navigate through paginated results.
 
-## Setup
+### Technologies Used
 
-Make sure to install the dependencies:
+- **Nuxt.js**: Nuxt.js is used as the framework for building the application. It provides server-side rendering, routing, and other useful features.
+- **Vue.js**: Vue.js is the JavaScript framework used for building user interfaces. It offers reactive data binding and component-based architecture.
+- **Vue Router**: Vue Router is used for managing application routes and navigation.
+- **Tailwind CSS**: Tailwind CSS is used for styling the application. It provides utility-first CSS classes for quickly building custom designs.
+- **VueUse**: VueUse is used for providing composition API utilities in Vue.js.
 
-```bash
-# npm
-npm install
+### Features
 
-# pnpm
-pnpm install
+1. **Popular Movies**: Browse a list of popular movies fetched from TMDB.
+2. **Top Rated Movies**: Explore top-rated movies according to TMDB ratings.
+3. **Upcoming Movies**: View a collection of upcoming movies.
+4. **Search**: Search for movies by title.
+5. **Pagination**: Navigate through paginated results for each category of movies.
 
-# yarn
-yarn install
+### API Usage
 
-# bun
-bun install
-```
+The application makes requests to the TMDB API to fetch movie data. The server-side component handles these requests and retrieves the necessary information to display on the client-side.
 
-## Development Server
+### Credits
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This application was built by **Viktor Filippov** as a project for learning purposes. It utilizes data from The Movie Database (TMDB) and various technologies including Nuxt.js, Vue.js, Vue Router, Tailwind CSS, and VueUse.
